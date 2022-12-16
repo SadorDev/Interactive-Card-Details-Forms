@@ -1,0 +1,63 @@
+@import url("(https://fonts.google.com/specimen/Space+Grotesk)");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 35% 100%;
+  background-color: var(--White);
+}
+
+#main-container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  display: grid;
+  column-gap: 50px;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+body {
+  background-image: none;
+}
+
+  .card_container {
+    justify-content: center;
+    padding-inline: 20px;
+    background-image: url(./images/bg-main-mobile.png) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 65%;
+    background-position: cover;
+  }
+}
+
