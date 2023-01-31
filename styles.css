@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 :root {
@@ -26,38 +24,49 @@ body {
   background-color: var(--White);
 }
 
-#main-container {
-  max-width: 1200px;
-  min-height: 100vh;
-  margin: auto;
-  display: grid;
-  column-gap: 50px;
-  place-items: center;
-  grid-template-columns: 1fr 1fr;
-}
-
 .card_container {
   display: flex;
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-left: 15px;
 }
 
+/* Front Card */
+.front_card_container {
+  position: absolute;
+  z-index: 2;
+  right: 60%;
+  top: 17%;
+}
+
+
+.front_card_container .card_logo {
+  position: absolute;
+  left: 10%;
+  top: 20px;
+}
+
+/* Back of the card */
+.card_back_container {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+/* 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(158, 36%, 37%);
+} */
 
 /* Media Query */
-@media screen and (max-width: 768px) {
-body {
-  background-image: none;
-}
-
-  .card_container {
-    justify-content: center;
-    padding-inline: 20px;
-    background-image: url(./images/bg-main-mobile.png) !important;
-    background-repeat: no-repeat;
-    background-size: 100% 65%;
-    background-position: cover;
+@media screen and (max-width: 425px) {
+ 
+  body {
+    display: none;
   }
 }
-
