@@ -17,11 +17,11 @@ body {
   line-height: 1.5;
   font-size: 1.8rem;
   font-weight: 500;
-  background-image: url(./images/bg-main-desktop.png);
   background-repeat: no-repeat;
   background-position: left;
   background-size: 35% 100%;
   background-color: var(--White);
+  background-image: url(./images/bg-main-desktop.png);
 }
 
 .card_container {
@@ -39,7 +39,6 @@ body {
   right: 60%;
   top: 17%;
 }
-
 
 .front_card_container .card_logo {
   position: absolute;
@@ -64,9 +63,25 @@ body {
 } */
 
 /* Media Query */
-@media screen and (max-width: 425px) {
- 
+
+@media (min-width: 320px) and (max-width: 480px) {
   body {
-    display: none;
+    background-image: url(images\bg-main-mobile.png);
+  }
+
+  .card_container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .front_card_container {
+    position: absolute;
+    top: 25%;
+    right: -8%;
+  }
+
+  .card_back_container {
+    position: absolute;
+    top: 15%;
   }
 }
